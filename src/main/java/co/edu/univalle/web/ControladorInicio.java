@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 @Slf4j
 public class ControladorInicio {
+
+    private static final String modificar = "modificar";
     
     @Autowired
     private PersonaService personaService;
@@ -38,13 +40,13 @@ public class ControladorInicio {
     
     @GetMapping("/agregar")
     public String agregar(Persona persona){
-        return "modificar";
+        return modificar;
     }
     
     @PostMapping("/guardar")
     public String guardar(@Valid Persona persona, Errors errores){
         if(errores.hasErrors()){
-            return "modificar";
+            return modificar;
         }
         personaService.guardar(persona);
         return "redirect:/";
@@ -54,7 +56,7 @@ public class ControladorInicio {
     public String editar(Persona persona, Model model){
         persona = personaService.encontrarPersona(persona);
         model.addAttribute("persona", persona);
-        return "modificar";
+        return modificar;
     }
     
     @GetMapping("/eliminar")
