@@ -12,17 +12,17 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
-                            <a th:href="@{/}" class="btn btn-ligth btn-block">
+                            <a id="btnRegresar" th:href="@{/}" class="btn btn-ligth btn-block">
                                 <i class="fas fa-arrow-left"></i> [[#{accion.regresar}]]
                             </a>
                         </div>
                         <div class="col-md-3">
-                            <button type="submit" class="btn btn-success btn-block">
+                            <button id="btnGuardar" type="submit" class="btn btn-success btn-block">
                                 <i class="fas fa-check"></i> [[#{accion.guardar}]]
                             </button>
                         </div>
                         <div class="col-md-3">
-                            <a th:href="@{/eliminar(idPersona=${persona.idPersona})}"
+                            <a id="btnEliminar" th:href="@{/eliminar(idPersona=${persona.idPersona})}"
                                 class="btn btn-danger btn-block">
                                 <i class="fas fa-trash"></i> [[#{accion.eliminar}]]
                             </a>
