@@ -26,13 +26,13 @@ public class HolaSpringApplicationTests {
 		driver = new ChromeDriver();
 	}
 
-	@AfterClass
+	/*@AfterClass
 	public static void cerrarTest(){
 		driver.quit();
-	}
+	}*/
 
 	@Test
-	public void pruebasDeFuncionalidad(){
+	public void pruebasDeFuncionalidad() throws InterruptedException {
 		WebElement element;
 		String title, currentUrl;
 		WebDriverWait wait = new WebDriverWait(driver, 20);
@@ -84,21 +84,25 @@ public class HolaSpringApplicationTests {
 		element = driver.findElement(By.id("btnAgregar"));
 		element.click();
 
-		element = driver.findElement(By.id("nombre"));
-		//element.clear();
+		element = driver.findElement(By.name("nombre"));
+		element.clear();
 		element.sendKeys("Keren");
 
 		element = driver.findElement(By.name("apellido"));
-		//element.clear();
+		element.clear();
 		element.sendKeys("Benavides");
 
 		element = driver.findElement(By.name("email"));
-		//element.clear();
+		element.clear();
 		element.sendKeys("keren.benavides@correounivalle.edu.co");
 
 		element = driver.findElement(By.name("telefono"));
-		//element.clear();
+		element.clear();
 		element.sendKeys("3164183181");
+
+		element = driver.findElement(By.name("saldo"));
+		element.clear();
+		element.sendKeys("50000");
 
 		src = ts.getScreenshotAs(OutputType.FILE);
 		dst = new File(".\\src\\main\\resources\\imagenesselenium\\imagenAgregar.png");

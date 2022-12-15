@@ -18,6 +18,7 @@
         <java.version>13</java.version>
         <sonar.organization>cesar920526</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <maven.compiler.source>13</maven.compiler.source>
     </properties>
 
     <dependencies>

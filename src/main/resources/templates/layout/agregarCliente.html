@@ -8,15 +8,6 @@
     </head>
     <body>
         <section th:fragment="agregarCliente">
-            <div id="agregarCliente" class="modal fade">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header bg-info text-white">
-                            <h5 class="modal-title" th:text="#{accion.agregar}">Agregar Cliente</h5>
-                            <button class="close" data-dismiss="modal">
-                                <span>&times;</span>
-                            </button>
-                        </div> 
                         <form th:action="@{/guardar}" th:object="${persona}"
                               method="POST" class="was-validated">
                             <div class="modal-body">
@@ -45,9 +36,6 @@
                                 <button class="btn btn-primary" type="submit" id="btnGuardar" th:text="#{accion.guardar}">Guardar</button>
                             </div>
                         </form>
-                    </div>
-                </div>
-            </div>
         </section>
 
     </body>
