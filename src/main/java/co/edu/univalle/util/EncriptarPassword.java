@@ -13,8 +13,8 @@ public class EncriptarPassword {
     public static void main(String[] args) {
         
         var password = "123";
-        logger.log(Level.INFO, "\npassword: " + password);
-        logger.log(Level.INFO,"\npassword encriptado:" + encriptarPassword(password));
+        logger.log(Level.SEVERE, "password: {0} ", password);
+        logger.log(Level.SEVERE,"password encriptado: {0} ", encriptarPassword(password));
     }
     
     public static String encriptarPassword(String password){

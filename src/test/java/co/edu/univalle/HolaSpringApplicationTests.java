@@ -26,10 +26,10 @@ public class HolaSpringApplicationTests {
 		driver = new ChromeDriver();
 	}
 
-	/*@AfterClass
+	@AfterClass
 	public static void cerrarTest(){
 		driver.quit();
-	}*/
+	}
 
 	@Test
 	public void pruebasDeFuncionalidad() throws InterruptedException {
